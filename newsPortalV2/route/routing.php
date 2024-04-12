@@ -15,6 +15,17 @@ if ($path == '' or $path == 'index' or $path == 'index.php') {
 } elseif ($path == 'insertcomment' and isset($_GET['comment'], $_GET['id'])) {
     $response = Controller::insertComment($_GET['comment'], $_GET['id']);
 }
+//register user
+
+elseif ($path == "registerForm")
+{ //form register
+    $response =Controller::registerForm();
+}
+elseif ($path == "registerAnswer")
+{
+//register user
+    $response = Controller::registerUser();
+}
 
 // Error page
 else {
